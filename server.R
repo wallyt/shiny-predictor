@@ -4,6 +4,7 @@ library(scales)
 library(randomForest)
 library(ROCR)
 library(caret)
+library(e1071)
 
 training <- read.csv("data/training.csv")
 training$Performance <- factor(training$Performance, levels = c("Good", "Bad"))
