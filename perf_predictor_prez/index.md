@@ -16,7 +16,7 @@ knit        : slidify::knit2slides
 
 That leaves 20% for modeling and testing. But what about the time required to communicate, convince and deploy models?
 
-<img src="assets/img/black_box.jpg", width=300px, style="float:right; margin: 0 0 10px 15px">
+<img src="assets/img/black_box.jpg", class="imager">
 Data scientists all too often present their models as plug-and-play black boxes. Maybe, just maybe, we take the time to explain the model or create a presentation, but that's not the best way to ensure all our hard work actually gets used.
 
 People don't need to [grok](https://en.wikipedia.org/wiki/Grok) how or why our models work, they just need to understand enough to trust that the rest of our work is reliable.
@@ -223,7 +223,7 @@ Our app is critical to getting full-team buy-in:
 > 2. Build full, production-ready model 
 > 3. Build scaled-down interactive model 
 > 4. Give scaled-down model to stakeholders 
-> 5. Watch as they sell themselves on your full model 
+> 5. Watch as they sell themselves on the full model 
 
 ---
 
