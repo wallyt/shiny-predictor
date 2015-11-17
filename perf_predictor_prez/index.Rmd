@@ -1,0 +1,69 @@
+---
+title       : Interactive Loan Performance Predictor
+subtitle    : Putting the user in control
+author      : Wally Thornton
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [bootstrap, shiny, interactive]
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+    
+## Problem: No one trusts the model
+
+### It's said that 80% of data science is data wrangling and cleaning.
+
+That leaves 20% for modeling and testing. But what about the time required to communicate, convince and deploy models?
+
+<img src="assets/img/black_box.jpg", width=300px, style="float:right; margin: 0 0 10px 15px">
+Data scientists all too often present their models as plug-and-play black boxes. Maybe, just maybe, we take the time to explain the model or create a presentation, but that's not the best way to ensure all our hard work actually gets used.
+
+People don't need to [grok](https://en.wikipedia.org/wiki/Grok) how or why our models work, they just need to understand enough to trust that the rest of our work is reliable.
+
+We built a fairly complex random forest model to predict performance of a specific portfolio of loans. Imagine the difficulty of explaining how such a model works and why it should be trusted.
+
+This is why we built the Interactive Loan Performance Predictor app.
+
+--- &twocolvar w1:30% w2:60%
+
+## What's more likely to lead to understanding?
+
+*** =left
+
+<span style="font-size: 0.7em; line-height: 0.75em">"During 2008, sales of apples increased in our Western region, reversing during 2009, although expenses stayed more or less even. Meanwhile, orange revenues stayed flat in 2008 in the Eastern region, but in 2009, expenses shot up, all while banana sales bottomed out by 2010, as did their expenses. The net result was that, thanks to apples, our profits peaked at the beginning of 2009 and shrank to their smallest amount to date by the end of that year."</span>
+
+*** =right
+or, **Interactivity** (press Play):
+<span style="margin: 0 auto">
+```{r opts.label = 'interactive', results = 'asis', echo=F, message=F, warning=F}
+require(googleVis)
+M1 <- gvisMotionChart(Fruits, idvar = 'Fruit', timevar = 'Year', options = list(width=450, height=400))
+print(M1, tag = 'chart')
+```
+</span>
+
+---
+
+## User-Friendly, Interactive Model
+<q>Tell me and I forget, teach me and I may remember, involve me and I learn.</q>
+<div class="author">Benjamin Franklin</div>
+<br>
+
+In addition to our full model, we built a simplified version of the model and made it interactive. Now, the executive team can adjust inputs and see the results for themselves. There's no longer an urge to understand or question the functionality of our full-featured "black box" because the box has been made more transparent.
+
+Our app is critical to getting full-team buy-in:
+> 1. Do all necessary data wrangling and modeling 
+> 2. Build full, production-ready model 
+> 3. Build scaled-down interactive model 
+> 4. Give scaled-down model to stakeholders 
+> 5. Watch as they sell themselves on the full model 
+
+---
+
+## The Performance Predictor App
+
+The Interactive Loan Performance Predictor not only runs valid machine learning models on real data, it does a superior job of helping the audience understand how the app predicts the performance of our loans.
+([https://wthornton.shinyapps.io/Loan_Performance_Predictor](https://wthornton.shinyapps.io/Loan_Performance_Predictor))
+
+<iframe src="https://wthornton.shinyapps.io/Loan_Performance_Predictor"></iframe>
