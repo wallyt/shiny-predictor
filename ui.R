@@ -8,10 +8,10 @@ testing <- read.csv("data/testing.csv")
 shinyUI(fluidPage(style = "margin-bottom: 20px",
     h1("You-Build-It Loan Performance Predictor", 
        style = "color: #FFF; background-color: #4B5B75; text-align: center; padding: 15px"),
-    fluidRow(h4('This is an interactive application that fits and then validates a random forest predictive model
-                on a preloaded dataset of loans made to residential real estate investors. 
-               Below are the potential input variables that can be used to predict the loans\' performance, and 
-               you\'re in control!', style = "padding: 5px 20px")
+    fluidRow(h4('This is an interactive application that uses a predictive model (random forest)
+                on a sample set of loans made to residential real estate investors. 
+               Below are the potential input variables that can be used to predict the loans\' performance (whether a "good" loan 
+                or a "bad" loan), and you\'re in control!', style = "padding: 5px 20px")
     ),
     br(),
     fluidRow(
@@ -24,8 +24,10 @@ shinyUI(fluidPage(style = "margin-bottom: 20px",
                 tags$li('If you select "Credit Score", you can adjust the range of borrowers\' scores with the slider'),
                 tags$li('Clicking "Run it!" will automatically fit a random forest model to a training set and then 
                         validate the model'),
-                tags$li('Gauge the predictability of your model by the accuracy, the confusion matrix and the AUC 
-                        calculation in the chart (AUC of 1.0 = perfect, AUC of 0.5 = random guess, so higher is better)'),
+                tags$li('The summarized results to the right show how well the model predicted loan performance ("good" or "bad") on the test data. 
+                        You can tell how well it worked by the accuracy number (higher the better), the confusion matrix 
+                        (which tabulates and compares predicted good/bad loans vs. actual good/bad loans) 
+                        and the "AUC" number in the chart (AUC of 1.0 = perfect, AUC of 0.5 = random guess, so higher is better)'),
                 tags$li('Change which input factors should be used and rerun it to see if you can 
                         build a more accurate model!')
             ),
@@ -51,10 +53,11 @@ shinyUI(fluidPage(style = "margin-bottom: 20px",
         column(7, style = "margin-left: 10px",
             h3('Result of random forest model'),
             br(),
-            h4("You've selected:"),
+            h4("You've selected the variables:"),
             verbatimTextOutput("vars"),
             h4("And a range of credit scores of:"),
             verbatimTextOutput("cr-range"),
+            br(),
             h4("Which resulted in an accuracy on the test set of:"),
             verbatimTextOutput("accur"),
             h4("With a confusion matrix of:"),
