@@ -54,11 +54,11 @@
 <p>That leaves 20% for modeling and testing. But what about the time required to communicate, convince and deploy models?</p>
 
 <p><img src="assets/img/black_box.jpg", class="imager">
-Data scientists all too often present their models as plug-and-play black boxes. Maybe, just maybe, we take the time to explain the model or create a presentation, but that&#39;s not the best way to ensure all our hard work actually gets used.</p>
+We built a fairly complex random forest model to predict performance of a specific portfolio of loans. Imagine the difficulty of explaining to a business audience how such a model works and why it should be trusted, short of just saying it&#39;s a plug-and-play black box. The result would be confusion and impatience, even with plots.</p>
 
-<p>People don&#39;t need to <a href="https://en.wikipedia.org/wiki/Grok">grok</a> how or why our models work, they just need to understand enough to trust that the rest of our work is reliable.</p>
+<p>Better to first present an interactive, visual representation of the model so the user can see for themselves how different variables and input ranges will affect prediction accuracy. The bridge is built to understanding and the conversation can go deeper.</p>
 
-<p>We built a fairly complex random forest model to predict performance of a specific portfolio of loans. Imagine the difficulty of explaining how such a model works and why it should be trusted.</p>
+<p>People don&#39;t need to <a href="https://en.wikipedia.org/wiki/Grok">grok</a> how or why our model works, they just need to understand enough to trust that the rest of our work is reliable.</p>
 
 <p>This is why we built the Interactive Loan Performance Predictor app.</p>
 
@@ -68,7 +68,7 @@ Data scientists all too often present their models as plug-and-play black boxes.
 
 <slide class="" id="slide-2">
   <hgroup>
-    <h2>What&#39;s more likely to lead to understanding?</h2>
+    <h2>Example: What&#39;s more likely to lead to understanding?</h2>
   </hgroup>
   
 <div class='left' style='float:left;width:30%'>
@@ -76,7 +76,7 @@ Data scientists all too often present their models as plug-and-play black boxes.
 
 </div>    
 <div class='right' style='float:right;width:60%'>
- <p>or, <strong>Interactivity</strong> (press Play):
+ <p>or, R-code-generated <strong>Interactivity</strong> (press Play):
 <span style="margin: 0 auto"></p>
 
 <!-- MotionChart generated in R 3.1.2 by googleVis 0.5.9 package -->
@@ -259,39 +259,39 @@ callbacks.shift()();
 
 </div>
 </slide>
-<slide class="" id="slide-3" style="background:;">
+<slide class="" id="slide-3">
   <hgroup>
     <h2>User-Friendly, Interactive Model</h2>
   </hgroup>
-  <article data-timings="">
-    <p><q>Tell me and I forget, teach me and I may remember, involve me and I learn.</q></p>
+<p><q>Tell me and I forget, teach me and I may remember, involve me and I learn.</q></p>
 
 <div class="author">Benjamin Franklin</div>
+  
+<div class='left' style='float:left;width:45%'>
+ <p>Interactivity beats words, no question. So we built a simplified version of our full model and made it interactive. Now, the executive team can adjust inputs and see the results for themselves. No need to explain random forests, training sets or anything else. The user instantly sees how different input variables make the model perform better or worse.</p>
 
-<p><br></p>
+<p>The &quot;black box&quot;has been made more transparent.</p>
 
-<p>In addition to our full model, we built a simplified version of the model and made it interactive. Now, the executive team can adjust inputs and see the results for themselves. There&#39;s no longer an urge to understand or question the functionality of our full-featured &quot;black box&quot; because the box has been made more transparent.</p>
-
-<p>Our app is critical to getting full-team buy-in:</p>
+</div>    
+<div class='right' style='float:right;width:45%'>
+ <h3>Our app is critical to getting full-team buy-in for the full model:</h3>
 
 <ol class = "build incremental">
 <li>Do all necessary data wrangling and modeling </li>
 <li>Build full, production-ready model </li>
 <li>Build scaled-down interactive model </li>
 <li>Give scaled-down model to stakeholders </li>
-<li>Watch as they sell themselves on the full model </li>
+<li>Watch as they sell themselves on the full model, FTW! </li>
 </ol>
 
-  </article>
-  <!-- Presenter Notes -->
+</div>
 </slide>
-
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
     <h2>The Performance Predictor App</h2>
   </hgroup>
   <article data-timings="">
-    <p>The Interactive Loan Performance Predictor not only runs valid machine learning models on real data, it does a superior job of helping the audience understand how the app predicts the performance of our loans.
+    <p>The Interactive Loan Performance Predictor not only runs valid machine learning models on real data, it does a superior job of helping the audience understand how the app predicts the performance of our loans. Only after understanding our app can the conversation move to deeper, more complex topics.
 (<a href="https://wthornton.shinyapps.io/Loan_Performance_Predictor">https://wthornton.shinyapps.io/Loan_Performance_Predictor</a>)</p>
 
 <iframe src="https://wthornton.shinyapps.io/Loan_Performance_Predictor"></iframe>
@@ -312,7 +312,7 @@ callbacks.shift()();
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='What&#39;s more likely to lead to understanding?'>
+        data-slide=2 title='Example: What&#39;s more likely to lead to understanding?'>
          2
       </a>
     </li>

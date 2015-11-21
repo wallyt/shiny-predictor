@@ -17,24 +17,24 @@ knit        : slidify::knit2slides
 That leaves 20% for modeling and testing. But what about the time required to communicate, convince and deploy models?
 
 <img src="assets/img/black_box.jpg", class="imager">
-Data scientists all too often present their models as plug-and-play black boxes. Maybe, just maybe, we take the time to explain the model or create a presentation, but that's not the best way to ensure all our hard work actually gets used.
+We built a fairly complex random forest model to predict performance of a specific portfolio of loans. Imagine the difficulty of explaining to a business audience how such a model works and why it should be trusted, short of just saying it's a plug-and-play black box. The result would be confusion and impatience, even with plots.
 
-People don't need to [grok](https://en.wikipedia.org/wiki/Grok) how or why our models work, they just need to understand enough to trust that the rest of our work is reliable.
+Better to first present an interactive, visual representation of the model so the user can see for themselves how different variables and input ranges will affect prediction accuracy. The bridge is built to understanding and the conversation can go deeper.
 
-We built a fairly complex random forest model to predict performance of a specific portfolio of loans. Imagine the difficulty of explaining how such a model works and why it should be trusted.
+People don't need to [grok](https://en.wikipedia.org/wiki/Grok) how or why our model works, they just need to understand enough to trust that the rest of our work is reliable.
 
 This is why we built the Interactive Loan Performance Predictor app.
 
 --- &twocolvar w1:30% w2:60%
 
-## What's more likely to lead to understanding?
+## Example: What's more likely to lead to understanding?
 
 *** =left
 
 <span style="font-size: 0.7em; line-height: 0.75em">"During 2008, sales of apples increased in our Western region, reversing during 2009, although expenses stayed more or less even. Meanwhile, orange revenues stayed flat in 2008 in the Eastern region, but in 2009, expenses shot up, all while banana sales bottomed out by 2010, as did their expenses. The net result was that, thanks to apples, our profits peaked at the beginning of 2009 and shrank to their smallest amount to date by the end of that year."</span>
 
 *** =right
-or, **Interactivity** (press Play):
+or, R-code-generated **Interactivity** (press Play):
 <span style="margin: 0 auto">
 ```{r opts.label = 'interactive', results = 'asis', echo=F, message=F, warning=F}
 require(googleVis)
@@ -43,27 +43,32 @@ print(M1, tag = 'chart')
 ```
 </span>
 
----
+--- &twocolvar w1:48% w2:45%
 
 ## User-Friendly, Interactive Model
 <q>Tell me and I forget, teach me and I may remember, involve me and I learn.</q>
 <div class="author">Benjamin Franklin</div>
-<br>
 
-In addition to our full model, we built a simplified version of the model and made it interactive. Now, the executive team can adjust inputs and see the results for themselves. There's no longer an urge to understand or question the functionality of our full-featured "black box" because the box has been made more transparent.
+*** =left
 
-Our app is critical to getting full-team buy-in:
+Interactivity beats words, no question. So we built a simplified version of our full model and made it interactive. Now, the executive team can adjust inputs and see the results for themselves. No need to explain random forests, training sets or anything else. The user instantly sees how different input variables make the model perform better or worse.
+
+The "black box"has been made more transparent.
+
+*** =right
+
+### Our app is critical to getting full-team buy-in for the full model:
 > 1. Do all necessary data wrangling and modeling 
 > 2. Build full, production-ready model 
 > 3. Build scaled-down interactive model 
 > 4. Give scaled-down model to stakeholders 
-> 5. Watch as they sell themselves on the full model 
+> 5. Watch as they sell themselves on the full model, FTW! 
 
 ---
 
 ## The Performance Predictor App
 
-The Interactive Loan Performance Predictor not only runs valid machine learning models on real data, it does a superior job of helping the audience understand how the app predicts the performance of our loans.
+The Interactive Loan Performance Predictor not only runs valid machine learning models on real data, it does a superior job of helping the audience understand how the app predicts the performance of our loans. Only after understanding our app can the conversation move to deeper, more complex topics.
 ([https://wthornton.shinyapps.io/Loan_Performance_Predictor](https://wthornton.shinyapps.io/Loan_Performance_Predictor))
 
 <iframe src="https://wthornton.shinyapps.io/Loan_Performance_Predictor"></iframe>
