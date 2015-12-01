@@ -209,7 +209,7 @@ callbacks.shift()();
 </div>
 </span>
 
---- &twocolvar w1:45% w2:45%
+--- &twocolvar w1:48% w2:45%
 
 ## User-Friendly, Interactive Model
 <q>Tell me and I forget, teach me and I may remember, involve me and I learn.</q>
